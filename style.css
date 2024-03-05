@@ -1,0 +1,411 @@
+html {
+  height: 100%;
+  width: 100%;
+  
+}
+
+/*this is where i styled the header of my page*/
+
+header{
+  
+  background-color:white;
+  height: 80px;
+
+}
+
+/* using th * symbol i assigned the font to be arial if it is supported and if not the page has  backup fonts */
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*to make sure ther was no padding where i didnt want it*/
+
+body{
+  background-color: #f2f2f2;
+  margin:0;
+  padding:0;
+}
+
+/*for the drop down menu i gave it 20px of padding for good space around and asigned the background colour to be white because it was automatically grey and no border to make it match the real website*/ 
+
+/*ddm is for drop down menu*/
+
+/*here is where i created the moveable chevron on the navigation bar unfortunately I was unabble to get it to move whilst the rest of the div was hovered over*/
+
+.chevron{
+width:12px;
+height:12px;
+padding-left:5px;
+}
+
+.chevron:hover{
+transform:rotate(90deg);  
+}
+
+
+/*this is to make the drop down come as a solid block with no border*/
+
+.ddm {
+  padding:20px;
+  font-size: 15px;
+  background-color: white;
+  border:none;
+  }
+
+/*dd is for drop down as a whole*/
+
+/*this is how i was able to make the display appear next to eachother rather than beneath one another*/
+
+ #ccgb{
+   padding-left: 100px;
+ }
+
+ .dd{
+  display:inline-block;
+  padding-top: 10px;
+  padding-right: 10px;
+  position:static;
+ }
+/*a is the anchor tag*/
+
+.wh{
+ padding:5px 10px 5px 10px;
+ background-color:white;
+}
+
+/*ddc is for drop down content*/
+
+.ddc {
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 160px;
+  font-size:12px;
+}
+
+.ddc .wh {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+/*the words in the anchor and drop down menu are assigned to be highlighted when hovered over using font-weight*/
+
+/*these made it so when hovered over it wouldget highlighted*/
+
+.ddm:hover{
+  font-weight: 550;
+  border-bottom: 5px solid black;
+}
+
+.wh:hover{
+  font-weight: 550;
+}
+
+
+/*this is so that when it only drops down when selected and wont go under the bottom images*/
+.dd:hover .ddc {
+  z-index: 2;
+  display: block;
+  border-bottom:5px 
+}
+
+
+/*this is where i styled the slideshow aspect of my page i was bale to ge tthe images to slide seemlessly but not with the text and buttons overlapping it since it would either stay outside of the image or not move when changing slides*/
+
+
+.allslides{
+  max-width:1400px;
+  position:relative;
+  margin:0 auto;
+  z-index:1;
+}
+
+
+
+.slides{
+  margin-top:30px;
+  display:flex;
+  aspect-ratio:16/9;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.slidebutton{
+  display:inline-block;
+  column-gap:10px;
+
+  z-index:1;
+  
+}
+
+.slidebutton a{
+  width: 20px;
+  height:20px;
+  border-radius:50%;
+  border:1px solid grey;
+ display:inline-block;
+  
+}
+
+    
+
+
+ 
+
+
+
+/*this is where i styled the main information and body of the page*/ 
+.pop{
+  padding-top:50px;
+  text-align: center;
+  font-size:30px;
+}
+
+/*this class made everything center on all browsers*/
+.centall{
+text-align:center
+}
+
+/*this was so that they would be positioned exactly the same on the screen with the other*/
+.cen{
+  width: 500px;
+  height:500px;
+  background-color: white;
+  position:relative; 
+  display:inline-block;
+  border-radius: 20px;
+  overflow:hidden;
+  margin-right:30px;
+  margin-left:30px;  
+  text-align:left;
+
+}
+
+.arrow{
+  font-weight:bold;
+  font-size:20px;
+}
+
+/* had to add this to make sure links were centered*/
+.centext, .apop{
+  padding-left:40px;
+  padding-right: 40px;
+}
+
+
+
+/*styling the button*/
+.apop{
+  text-decoration:none;
+  color:black;
+
+}
+
+.apop:hover{
+  color:grey;
+}
+
+/*had to give them searate id's so that they looked similar but having them positioned like that required two separate id's to position them correctly*/ 
+
+#gi1{
+  width: 600px;
+  height:500px;
+  position:relative;
+  border-radius: 20px;
+  overflow:hidden;
+  left:80px;
+  top:50px; 
+  display:inline-block;
+  margin-top:5%;
+}
+
+#gi2{
+  width: 550px;
+  height:550px;
+  background-color: white;
+  position:relative;
+  border-radius: 20px;
+  overflow:hidden;
+  display:inline-block;
+
+}
+
+
+
+/*this is where i styled the button for the global impact section*/
+
+#gibutton{
+  background-color:white;
+  border:2px solid black;
+  border-radius:100px;
+  width:300px;
+  height:40px;
+  margin-top:60%;
+  font-weight:bold;
+  
+}
+
+#gibutton:hover{
+  opacity:0.6;
+}
+
+/* here is where i customised the icon buttons at the bottom and made it so they would expand when hovered over and set their universal size*/
+
+.eob{
+  width: 250px;
+  height:250px;
+  background-color: white;
+  position:relative;
+  border-radius: 20px;
+  overflow:hidden;
+  display:inline-block; 
+  margin-left:2%;
+  margin-top:2%; 
+  border:none;
+}
+
+.eob:hover{
+  transform:scale(1.1);
+  transition: 0.5s;
+  
+}
+
+.eobp{
+  width:200px;
+  height:100px;
+ 
+  
+}
+
+/* styling the view all button*/
+
+#vabutton{
+border:2px solid black;
+border-radius:100px;
+width:300px;
+height:40px;
+
+font-weight:bold;
+margin-top:100px;
+margin-bottom:120px;
+text-decoration:none;
+}
+
+#vabutton:hover{
+  opacity:0.6;
+}
+
+/*here is where i styled the footer with the right colours and padding to make it look more like the real website*/
+
+#footer{
+  background-color:black;
+  color:white;
+  max-height: 500px;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top:70px;
+  padding-bottom:70px;
+}
+
+/*here i positioned the location button to the right whilst also having it on the same line as the image*/
+.gbicon{
+  border-radius:100px;
+  width:180px;
+  height:40px;
+  float:right;
+  background-color: black;
+  border:2px solid white;
+  color:white;
+  align-items: center;
+  padding-bottom:40px;
+}
+
+#ccgb2, .gbicon, .material-icons{
+  display:inline-block;
+  margin-bottom:30px;
+}
+
+
+
+.gbicon:hover{
+  background-color:grey;
+}
+
+
+
+/*here is where i styled the icons*/
+
+.material-icons{
+  padding-top:5px;
+  padding-right:5px;
+}
+
+.smi{
+  float:right;
+  color:white;
+  border:2px solid white;
+  border-radius:50px;
+  padding:3px 5px 3px 5px;
+  margin-top:50px;
+ margin-left:10px;
+}
+
+.smi:hover{
+  color:grey;
+}
+
+
+
+/*where i styled the list so that it would have no decoaration and the top of each list would be on the same line as the other*/
+
+.info{
+  display:inline-block;
+  padding-right:40px;
+  padding-top:30px;
+  padding-bottom:30px;
+  font-size:15px;
+  font-weight:bold;
+} 
+
+.infoplus{
+  text-decoration: none;
+  color:white;
+  list-style-type:none;
+  padding: 10px 30px 10px 0px;
+  
+  
+}
+
+.style{
+  list-style-type:none;
+  display:inline-block;
+  vertical-align:top;
+  padding:0;
+  margin:0;
+}
+
+.gry{
+  color:grey;
+ 
+}
+
+.link{
+  text-decoration:none;
+  margin:0;
+  padding:0;
+  color:white;
+
+}
+
+/*this is where i got the last info to go right*/
+
+h5{
+  text-align:right;
+}
+
